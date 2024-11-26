@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rainbow Flag Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      transition: background 1s ease;
+    }
+    .rainbow {
+      background: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #555;
+    }
+    #content {
+      display: none;
+      text-align: center;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+    #content img {
+      max-width: 300px;
+      border: 5px solid white;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<button id="clickMe">Click Me</button>
+<div id="content">
+  <h1>Gay ahhh nga</h1>
+  <img id="chosenImage" src="" alt="Your Chosen Image">
+</div>
+
+<script>
+  document.getElementById("clickMe").addEventListener("click", function() {
+    // Hide the button
+    this.style.display = "none";
+
+    // Change the background to a rainbow flag
+    document.body.classList.add("rainbow");
+
+    // Display the content
+    const content = document.getElementById("content");
+    content.style.display = "block";
+
+    // Set your chosen image here
+    const chosenImageSrc = "Shoya.png"; // Replace this with the URL of your chosen image
+    document.getElementById("chosenImage").src = chosenImageSrc;
+  });
+</script>
+</body>
+</html>
